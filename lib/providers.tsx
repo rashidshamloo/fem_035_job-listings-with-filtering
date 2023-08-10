@@ -1,11 +1,24 @@
-'use client'
+'use client';
 
-/* Core */
-import { Provider } from 'react-redux'
+// redux toolkit
+import { Provider as ReduxProvider } from 'react-redux';
+import { reduxStore } from '@/lib/redux/store';
 
-/* Instruments */
-import { reduxStore } from '@/lib/redux'
+// style registry
+import StyledComponentsRegistry from './registry';
 
-export const Providers = (props: React.PropsWithChildren) => {
-  return <Provider store={reduxStore}>{props.children}</Provider>
-}
+// style-components theme
+import { ThemeProvider } from 'styled-components';
+import theme from '@/app/styles/theme';
+
+const Providers = (props: React.PropsWithChildren) => {
+  return (
+    <ReduxProvider store={reduxStore}>
+      <StyledComponentsRegistry>
+        <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+      </StyledComponentsRegistry>
+    </ReduxProvider>
+  );
+};
+
+export default Providers;

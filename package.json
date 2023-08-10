@@ -2,22 +2,31 @@
   "private": true,
   "scripts": {
     "dev": "next",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run --component && npx cypress run --e2e",
+    "test": "start-server-and-test dev http://localhost:3000 cypress:run",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.5",
+    "framer-motion": "^10.15.1",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-redux": "8.1.0"
+    "react-icons": "^4.10.1",
+    "react-redux": "8.1.0",
+    "styled-components": "^6.0.7",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@types/redux-logger": "3.0.9",
+    "cypress": "^12.17.3",
     "redux-logger": "3.0.6",
+    "start-server-and-test": "^2.0.0",
     "typescript": "5.1.3"
   }
 }
