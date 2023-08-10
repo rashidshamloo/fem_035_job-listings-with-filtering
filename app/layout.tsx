@@ -2,7 +2,7 @@
 import { Metadata } from 'next';
 
 // redux toolkit + style registry providers
-import Providers from '@/lib/Providers';
+import Providers from './providers/Providers';
 
 // global styles
 import GlobalStyles from '@/app/styles/GlobalStyles';

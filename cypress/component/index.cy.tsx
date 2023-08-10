@@ -3,7 +3,7 @@ import JobListing from '@/app/components/JobListing';
 import Filters from '@/app/components/Filters';
 
 // providers
-import Providers from '@/lib/Providers';
+import Providers from '@/app/providers/Providers';
 
 // test data
 import { testJob1 } from '../testData/testData';
