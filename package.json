@@ -24,7 +24,6 @@
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@types/redux-logger": "3.0.9",
-    "babel-plugin-styled-components": "^2.1.4",
     "cypress": "^12.17.3",
     "redux-logger": "3.0.6",
     "start-server-and-test": "^2.0.0",
