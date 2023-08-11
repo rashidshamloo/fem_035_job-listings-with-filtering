@@ -30,8 +30,8 @@ const JobListing = ({ job }: JobListingProps) => (
       <TitleWrapper>
         <Company>{job.company}</Company>
         <BadgeWrapper>
-          {job.new && <Badge type="new">NEW!</Badge>}
-          {job.featured && <Badge type="featured">FEATURED</Badge>}
+          {job.new && <Badge $type="new">NEW!</Badge>}
+          {job.featured && <Badge $type="featured">FEATURED</Badge>}
         </BadgeWrapper>
       </TitleWrapper>
       <Position href="#">{job.position}</Position>
