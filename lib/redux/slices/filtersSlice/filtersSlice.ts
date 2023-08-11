@@ -4,11 +4,10 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 // types
 interface State {
   filters: string[];
-  status: 'idle' | 'loading' | 'failed';
 }
 
 // initial state
-const initialState: State = { filters: [], status: 'idle' };
+const initialState: State = { filters: [] };
 
 export const filtersSlice = createSlice({
   name: 'filters',
