@@ -25,7 +25,6 @@ describe('Testing Redux store and actions', () => {
         .its('store')
         .invoke('getState')
         .its('filters')
-        .its('filters')
         .should('contain', 'testFilter');
     });
     it('Testing the "remove" action ', () => {
@@ -41,7 +40,6 @@ describe('Testing Redux store and actions', () => {
         .its('Cypress')
         .its('store')
         .invoke('getState')
-        .its('filters')
         .its('filters')
         .should('not.contain', 'testFilter');
     });
@@ -61,7 +59,6 @@ describe('Testing Redux store and actions', () => {
         .its('Cypress')
         .its('store')
         .invoke('getState')
-        .its('filters')
         .its('filters')
         .should('not.contain', 'testFilter');
     });
@@ -112,7 +109,6 @@ describe('Testing adding and removing filters', () => {
       .its('store')
       .invoke('getState')
       .its('filters')
-      .its('filters')
       .then((filters) => expect(filters.length).to.eq(0));
   });
   it('Testing adding a filter by clicking on it', () => {
@@ -121,7 +117,6 @@ describe('Testing adding and removing filters', () => {
       .its('Cypress')
       .its('store')
       .invoke('getState')
-      .its('filters')
       .its('filters')
       .then((filters) => expect(filters.includes('testRole1')).to.eq(true));
   });
@@ -132,7 +127,6 @@ describe('Testing adding and removing filters', () => {
       .its('Cypress')
       .its('store')
       .invoke('getState')
-      .its('filters')
       .its('filters')
       .then((filters) =>
         expect(
@@ -148,7 +142,6 @@ describe('Testing adding and removing filters', () => {
       .its('store')
       .invoke('getState')
       .its('filters')
-      .its('filters')
       .then((filters) => expect(filters.length).to.eq(0));
   });
   it('Testing clearing all filters by clicking "clear"', () => {
@@ -159,7 +152,6 @@ describe('Testing adding and removing filters', () => {
       .its('Cypress')
       .its('store')
       .invoke('getState')
-      .its('filters')
       .its('filters')
       .then((filters) => expect(filters.length).to.eq(0));
   });

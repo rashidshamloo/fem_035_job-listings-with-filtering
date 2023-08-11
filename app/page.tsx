@@ -35,14 +35,12 @@ export default function IndexPage() {
 
   const filteredJobs = useMemo(
     () =>
-      filters.filters.length > 0
+      filters.length > 0
         ? jobs.jobs.filter((job) => {
             const jobFilters = [job.role, job.level]
               .concat(job.languages)
               .concat(job.tools);
-            return filters.filters.every((filter) =>
-              jobFilters.includes(filter)
-            );
+            return filters.every((filter) => jobFilters.includes(filter));
           })
         : jobs.jobs,
     [jobs, filters]
@@ -58,7 +56,7 @@ export default function IndexPage() {
     <LayoutGroup>
       <Header />
       <AnimatePresence>
-        {filters.filters.length > 0 && <Filters filters={filters.filters} />}
+        {filters.length > 0 && <Filters filters={filters} />}
       </AnimatePresence>
       <Container>
         <SROnlyTitle>Job Listings with Filtering</SROnlyTitle>
