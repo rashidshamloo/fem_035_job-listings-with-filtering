@@ -120,12 +120,12 @@ export const BadgeWrapper = styled.div`
   }
 `;
 
-export const Badge = styled.div<{ type: 'new' | 'featured' }>`
+export const Badge = styled.div<{ $type: 'new' | 'featured' }>`
   padding: 0.375rem 0.5rem 0.125rem 0.5rem;
   border-radius: 1.25rem;
   color: white;
-  background-color: ${({ theme, type }) =>
-    type === 'new'
+  background-color: ${({ theme, $type }) =>
+    $type === 'new'
       ? theme.colors.grayishCyanFeatured
       : theme.colors.veryDarkGrayishCyan};
   font-size: 0.9rem;
