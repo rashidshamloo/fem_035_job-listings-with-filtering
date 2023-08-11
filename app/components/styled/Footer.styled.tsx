@@ -1,7 +1,25 @@
+// react
+import { ReactNode } from 'react';
+
+// framer-motion
+import { motion } from 'framer-motion';
+
 // styled-components
 import { styled } from 'styled-components';
 
-export const FooterContainer = styled.footer`
+const MotionFooterContainer = ({
+  children,
+  className,
+}: {
+  children?: ReactNode;
+  className?: string;
+}) => (
+  <motion.footer layout className={className} key="footer">
+    {children}
+  </motion.footer>
+);
+
+export const FooterContainer = styled(MotionFooterContainer)`
   display: flex;
   flex-direction: column;
   align-items: center;
