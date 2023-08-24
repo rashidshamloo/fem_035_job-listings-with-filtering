@@ -37,6 +37,7 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 ### Built with
 
 - TypeScript
+- React
 - Next.js
 - Styled Components
 - Redux Toolkit
