@@ -14,7 +14,6 @@ const styles = css`
     width: 100vw;
   }
   button {
-    /* font-family: 'League Spartan', sans-serif; */
     font-family: var(--league-spartan);
   }
 `;
